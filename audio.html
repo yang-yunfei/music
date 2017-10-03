@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>音乐播放器</title>
+    <!--屏幕小于等于800px时的样式-->
+	<link rel="stylesheet" media="screen and (max-width:800px)" href="css/small.css" type="text/css" />
+
+	<!--屏幕大于等于850px时的样式-->
+	<link rel="stylesheet" media="screen and (min-width:850px)" href="css/big.css" type="text/css" />
+  </head>
+  	<body>
+  		<div id="box">
+
+			<audio id="audio" src="music/yan_lei_de_cuo_jue.mp3"></audio>
+			
+			<!--封面-->
+  			<img id="cover" src="#"/>
+  			
+  			<!--歌曲详情-->
+  			<div id="catalog">
+  				<!--歌名-->
+  				<strong id="title"></strong>
+  				<!--歌手-->
+  				<div id="artist"></div>
+  				<!--专辑-->
+  				<div id="album"></div>
+  			</div>
+  			
+  			<!--控制按钮-->
+  			<div id="contrl">
+				<span class="line" id="prev"></span>
+				<span class="line" id="play"></span>
+				<span class="line" id="pause"></span>
+				<span class="line" id="next"></span>
+			</div>
+  			
+  			<!--音量调节柱-->
+  			<div id="sound">
+				<div id="volume"></div>
+ 				<div id="mute"></div>
+  				<div id="outside">
+      				<div id="inside"></div>
+    			</div>
+    		</div>
+  			
+  			
+  			<!--进度调节柱-->
+  			<div id="outline">
+      			<div id="inline"></div>
+    		</div>
+    		
+    		<div id="progress">
+    			<!--播放进度-->
+  				<span id="current">0:00</span>
+  				<span id="split">/</span>
+  				<!--播放时长-->
+  				<span id="duration">N:NN</span>
+  			</div>
+  			
+    		<!--播放顺序-->
+    		<div id="order">
+				<span class="line" id="repeat"></span>
+				<span class="line" id="shuffle"></span>
+				<span class="line" id="list"></span>
+			</div>
+    	
+  			<!--播放歌词-->
+  			<div id="lrc"></div> 
+
+  			<!--歌词-->
+  			<div id="url"></div>
+  			<!--歌单-->
+  			<div id="mylist">
+  				<ul id="playlist"></ul>	
+  			</div>
+
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+ 		<script type="text/javascript" src="js/audio.js"></script>
+	</body>
+</html>

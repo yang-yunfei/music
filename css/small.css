@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/* CSS Document */
+	* {
+  		margin: 0;
+  		padding: 0;
+	}	
+
+/*播放控制按钮：上一步，播放，暂停，下一步*/
+	.line{
+		display: inline-block;
+	}
+
+	#prev{
+		background-image: url(../images/rewind.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity: 0.7;
+	}
+
+	#play{
+		background-image: url(../images/play.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity: 0.7;
+	}
+
+	#pause{
+		background-image: url(../images/pause.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		display: none;
+		opacity: 0.7;
+	}
+
+	#next{
+		background-image: url(../images/fastforward.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity: 0.7;
+	}
+/*播放顺序：顺序，循环，随机*/
+
+	#repeat{
+		background-image: url(../images/repeat.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity:0.5;
+	}
+
+	#shuffle{
+		background-image: url(../images/shuffle.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity:0.5;
+	}
+
+	#list{
+		background-image: url(../images/list.png);
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		opacity:1.0;
+	}
+	
+/*音量调节滑块控件和进度调节滑块控件*/
+	#volume{
+		background-image: url(../images/volume.png);
+		background-repeat: no-repeat;
+		width: 16px;
+		height: 16px;
+		display:  inline-block;
+		vertical-align:middle;
+		line-height: 24px;
+	}
+
+	#mute{
+		background-image: url(../images/mute.png);
+		background-repeat: no-repeat;
+		width: 16px;
+		height: 16px;
+		display:  none;
+		vertical-align:middle;
+		line-height: 24px;
+	}
+
+	#outside{
+  		background: rgba(0, 0, 0, 0.3);
+		width:100px;
+  		height: 5px;
+		display:  inline-block;
+  		position: relative;
+		-moz-border-radius: 5px;
+ 		-webkit-border-radius: 5px;
+  		-o-border-radius: 5px;
+ 		-ms-border-radius: 5px;
+ 		-khtml-border-radius: 5px;
+  		border-radius: 5px;
+  		-moz-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+ 		-webkit-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+ 		-o-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+  		box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+		}
+
+	#inside{
+  		position: absolute;
+		background: #258fb8;
+  		height: 100%;
+  		opacity: 0.7;
+  		-moz-border-radius: 5px;
+ 		-webkit-border-radius: 5px;
+  		-o-border-radius: 5px;
+ 		-ms-border-radius: 5px;
+ 		-khtml-border-radius: 5px;
+  		border-radius: 5px;
+	}
+
+	#outline{
+  		background: rgba(0, 0, 0, 0.3);
+		width:300px;
+  		height: 5px;
+		top: 0px;
+		left: 180px;
+		margin-bottom: 8px;
+		display:  block;
+  		position: relative;
+  		-moz-border-radius: 5px;
+ 		-webkit-border-radius: 5px;
+  		-o-border-radius: 5px;
+ 		-ms-border-radius: 5px;
+ 		-khtml-border-radius: 5px;
+  		border-radius: 5px;
+  		-moz-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+ 		-webkit-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+ 		-o-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+  		box-shadow:  0 1px 2px rgba(0, 0, 0, 0.5);
+	}
+	
+	#inline{
+  		position: absolute;
+		background: #258fb8;
+  		height: 100%;
+		width: 0px;
+  		opacity: 0.7;
+  		-moz-border-radius: 5px;
+ 		-webkit-border-radius: 5px;
+  		-o-border-radius: 5px;
+ 		-ms-border-radius: 5px;
+ 		-khtml-border-radius: 5px;
+  		border-radius: 5px;
+	}
+
+	#playlist {
+  		background: rgba(0, 0, 0, 0.5);
+  		width: 455px;
+  		height:85px; overflow-y:scroll;
+  		overflow-x: hidden;
+  		padding: 10px 15px;
+  		list-style: none;
+  		position: relative;
+  		-moz-border-radius: 5px;
+ 		-webkit-border-radius: 5px;
+  		-o-border-radius: 5px;
+ 		-ms-border-radius: 5px;
+ 		-khtml-border-radius: 5px;
+  		border-radius: 5px;
+  		-moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+ 		-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+ 		-o-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	}
+
+	#playlist li {
+  		color: #aaa;
+  		font-size: 12px;
+  		line-height: 2;
+  		padding-left: 25px;
+		cursor: pointer;
+  		text-overflow: ellipsis;
+  		-moz-transition: 0.3s;
+  		-webkit-transition: 0.3s;
+  		-o-transition: 0.3s;
+  		transition: 0.3s;
+	}
+
+	#playlist li:hover {
+  		color: #fff;
+	}
+
+	.playing {
+  		background: url(../images/playing.png) no-repeat 0 center;
+  		color: #fff;
+  		font-weight: bold;
+	}
+/*封面图片*/
+	#cover {
+  		background: rgba(0, 0, 0, 0.5);
+  		border: 1px solid #333;
+  		position: relative;
+  		top: 25px;
+  		left: 25px;
+  		overflow: hidden;
+  		-moz-border-radius: 10px;
+  		-webkit-border-radius: 10px;
+  		-o-border-radius: 10px;
+  		-ms-border-radius: 10px;
+  		-khtml-border-radius: 10px;
+  		border-radius: 10px;
+  		width: 130px;
+  		height: 130px;
+  		-moz-box-shadow: 0 2px 10px black;
+  		-webkit-box-shadow: 0 2px 10px black;
+  		-o-box-shadow: 0 2px 10px black;
+  		box-shadow: 0 2px 10px black;
+	}
+	
+	#title{
+		color:#DFDEDE;
+	}
+
+	#catalog {
+		position: absolute;
+		margin:28px 50px 10px 50px;
+		text-shadow: 0 1px 2px #000;
+    	line-height: 22px;
+		display: inline-block;
+	}
+
+	#contrl {
+		position:relative;
+		text-shadow: 0 1px 2px #000;
+		top: 0px;
+		left: 45px;
+    	line-height: 24px;
+		display: inline-block;
+	}
+	
+	#sound{
+		position:relative;
+		text-shadow: 0 1px 2px #000;
+		bottom: 12px;
+		left: 125px;
+    	line-height: 24px;
+		display: inline-block;
+	}
+	
+	#url{
+		display: none;
+	}
+
+	#current{
+		display: inline-block;
+	}
+	
+	#split{
+		display: inline-block;
+	}
+
+	#duration{
+		display: inline-block;
+	}
+
+	#progress{
+		position:relative;
+		height: 16px;
+		bottom: 4px;
+		left: 180px;
+		display: inline-block;
+	}
+
+	#order{
+		position:relative;
+		line-height: 16px;
+		vertical-align: middle;
+		top: 0px;
+		left: 340px;
+		display: inline-block;
+	}
+
+	#lrc{
+		position: relative;
+		height:16px;
+		bottom: 7px;
+		margin-left: 250px;
+		display: block;
+		color: #fff;
+		z-index: 2;
+	}
+	
+	/* 坚屏模式 */
+	@media only screen and (orientation: portrait) {	
+		body{
+			font: 14px "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; 
+  			color: #BDBDBD;
+			background-image: url(../images/y_bg.jpg);
+			background-size: cover;
+			overflow: hidden;
+		}
+	
+		#box{
+			background-image: url(../images/y_bg.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding-top: 20%;
+		}
+
+	#outside{
+		width:60px;
+		}
+
+	#outline{
+		width:160px;
+		}
+
+
+/*播放歌曲列表*/
+	#mylist{
+		margin-left: 10px;
+		margin-top: 12px;
+  		width: 340px;
+		}
+
+	#playlist {
+		width: 310px;
+  		height:112px;
+		}
+
+	
+	#sound{
+		left: 48px;
+		}
+
+
+	#order{
+		left: 200px;
+		}
+
+	#lrc{
+		bottom: 0px;
+		margin-top: 5px;
+		margin-left: 135px;
+		margin-bottom: 5px;
+		}
+	}
+
+	/* 横屏模式 */
+	@media screen and (orientation: landscape) {
+		body{
+			font: 14px "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; 
+  			color: #BDBDBD;
+			overflow: hidden;
+		}
+	
+		#box{
+			background-image: url(../images/x_box.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding-left: 12%;
+			padding-top: 5%;
+			height: 380px;
+		}
+		
+		/*播放歌曲列表*/
+		#mylist{
+			position:relative;
+			margin-left: 25px;
+			bottom: 0px;
+  			width: 465px;
+  			overflow-x: hidden;
+  			-moz-border-radius: 5px;
+  			-webkit-border-radius: 5px;
+  			-o-border-radius: 5px;
+  			-ms-border-radius: 5px;
+  			-khtml-border-radius: 5px;
+  			border-radius: 5px;
+		}
+	}
